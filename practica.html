@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title> Practicando </title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="p-4 bg-gray-600 text-center shadow-xl"> 
+        <p class="text-white text-xl">Listado de supermercado 🍕🍔</p>
+    </div>
+    <div class="grid grid-cols-3 gap-4 m-10 w-full h-full">
+        <div class="col-span-1 border p-4 shadow-xl rounded-l flex flex-col">
+            <label class="text-sm text-gray-400"> Nombre de producto</label>
+            <input class="border rounder shadow-l p-2" type="text" placeholder="Producto">
+            <label class="text-sm text-gray-400 mt-4"> Precio de producto</label>
+            <input class="border rounder shadow-l p-2" type="number" placeholder="Precio">
+            <button class="mt-6 mb-4 text-white bg-green-600 p-2 shadow-l hover:bg-green-800">
+                Cargar
+            </button>
+        </div>
+        <div class="col-span-2">
+            <div class="grid grid-cols-3 gap-2">
+              <span class="col-span-1"> Nombre </span>
+              <span class="col-span-1"> Precio </span>
+              <span class="col-span-1"> Opciones</span>
+            </div>
+            <div id="contenido">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let contenido=document.getElementById("contenido");
+    let guardandodatos='';
+
+
+    let lista=[
+        {nombre:"coca",precio:100},
+        {nombre:"mayonesa",precio:250},
+        {nombre:"coca",precio:100},
+        {nombre:"mayonesa",precio:250},
+        {nombre:"coca",precio:100},
+        {nombre:"mayonesa",precio:250}
+    ]
+
+    lista.forEach(item=>{
+        console.log('recorriendounitem')
+
+        guardandodatos+=`
+            <div class="grid grid-cols-3 gap-2">
+              <span class="col-span-1"> ${item["nombre"]} </span>
+              <span class="col-span-1"> ${item["precio"]} </span>
+              <span class="col-span-1"></span>
+            </div>
+        `
+
+        console.log(guardandodatos)
+    }) 
+
+    contenido.innerHTML=(guardandodatos)
+</script>

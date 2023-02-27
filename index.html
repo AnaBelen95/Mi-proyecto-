@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title> Primera pagina WEB</title>
+        <meta name="descrption" content="esta en mi primer pagina web"/>
+        <meta name="keywords" content="sitio web, pagina web, mi primer pagina"/>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <div class="agrupar">
+            <header class="cabecera">
+                <h1> Mi blog </h1>
+             </header>
+             <nav class="menu">
+                 <ul>
+                     <li> Sobre mi </li>
+                     <li id="experienciaslaborales"> Experiencias laborales </li>
+                     <li id="contacto"> Contacto </li>
+                 </ul>
+             </nav>
+             <section class="seccion">
+                 <article>
+                     <hgroup>
+                         <h1> Mi blog</h1>
+                         <h2> Sobre mí </h2>    
+                     </hgroup>
+                     <time datetime="28-06-2022"> Publicado 28-06-2022</time>
+                     <img src="images/gato.jpg">
+                     <p> 
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Officia nulla iusto aliquid hic placeat consequuntur incidunt neque
+                        et debitis sit voluptatem deserunt, eius in corporis numquam!
+                        Ipsam nisi unde temporibus.   
+                     </p>
+                     
+                     <footer>
+                       <p> comentarios 0 </p>      
+                     </footer>
+                     <address>
+                         <a href="http://google.com.ar">
+                             Visita a google
+                     </address>
+                     
+                     </a>
+                 </article>
+                 <article>
+                     <hgroup>
+                         <h1> Segundo articulo </h1>
+                         <h2> Caracteristicas </h2>   
+                     <time datetime="28-06-2022"> Publicado 28-06-2022</time>
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dolore atque, libero quos facere aspernatur animi unde temporibus, 
+                        exercitationem eos iure sed placeat reiciendis possimus id quisquam 
+                        optio nesciunt amet deserunt. 
+                     </p>
+                     <footer>
+                         <p> comentarios 0 </p> 
+                     </footer>
+                 </article>
+             </section>
+             <aside class="columna">
+                 <blockquote cite="http://fast.com" id="sitio1">
+                     Sitio 1
+                 </blockquote>
+                 <blockquote cite="http://facebook" id="sitio2">
+                     Sitio 2
+                 </blockquote>
+             </aside>
+             <footer class="pie">
+                 Creado por Ana G. 
+             </footer>
+        </div>
+        
+      
+
+       
+    </body>
+</html>
+
+<script>
+   let contacto=document.getElementById('contacto');
+   let sitio1=document.getElementById("sitio1");
+
+   let experienciaslaborales=document.getElementById("experienciaslaborales");
+   let sitio2=document.getElementById("sitio2");
+
+   console.log(contacto);
+
+   contacto.addEventListener('click', () =>  {
+        console.log('loco hiciste click')
+        sitio1.innerHTML="este es mi contacto soy ana belen 12312512312"
+   })
+ 
+   console.log(experienciaslaborales);
+   experienciaslaborales.addEventListener("click",() => {
+    sitio2.innerHTML="Te cuento un poco sobre mi historial laboral 😁";
+    sitio2.style.color="red"
+   })
+
+   let hola = () => {
+    
+   }
+
+   
+
+
+
+
+   
+</script>
